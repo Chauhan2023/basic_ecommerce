@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  scroll-behavior: smooth;
 }
+.logo{
+  border: 2px solid white;
+  padding: .5rem;
+  border-radius: .3rem;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0px 1rem;
+}
+
+.shopping-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
   color: white;
+  
+  font-weight: bold;
+  font-size: 1.5rem;
+  
+ padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+sup{
+  font-size: 1rem;
+}
+.card{
+  width: 33%;
+ 
+ 
+}
+.product-item {
+  padding: 20px;
+}
+.product-item>img {
+  height: 400px;
+  width: 400px;
+  border-radius: 1rem;
+  object-fit:contain;
+}
+.product-item>button {
+  width: 100px;
+  height: 40px;
+  border-radius: 1rem;
+  border: none;
+  
+}
+.product-item>p {
+  margin: 0px .2rem;
+  
+}
+.product-item>button:hover {
+  background-color: grey;
+  transition: all 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.cart-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem;
+}
+.cart-inner>span{
+  padding: 0.5rem;
+
+}
+.cart-inner>img{
+  border-radius: 0.5rem;
+
+}
+
+.cart>p{
+  font-size: 3rem;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+
+.category{
+  display: flex;
+  justify-content: center;
+margin: .5rem 1rem;
+}
+.category>span{
+margin: 0px 1rem;
+margin-right: 1rem;
+}
+
+
+@media screen and (max-width:1200px){
+
+.product-item>img{
+height: 200px;
+width: 200px;
+}
+}
+@media screen and (max-width:650px){
+.flex{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  width: 100%;
+  position: relative;
+ 
+}
+.product-item{
+  align-items: center;
+  flex-direction: column;
+}
+.product-item{
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+}
+.product-item>button{
+  width: 60%;
+  height: 60px;
+}
+.shopping-card {
+ 
+  width: 93%;
+  padding: 1rem;
+}
+.product-item>img{
+  height: 300px;
+  width: 300px;
+  }
+  .category{
+    display: contents;
+  margin: .5rem 0px;
+  }
+
+}
+
